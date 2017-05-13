@@ -40,9 +40,18 @@ class ChartPage extends Component {
 
   setData(res) {
     if(res.data && res.data[0] && res.data[0].chartData) {
+      var finalData = []
+      for(var i = 0; i < res.data.length; i++) {
+        for(var j=0; j< res.data[i].chartData.length; j++) {
+          finalData.push({
+            name: res.data[i].chartData[j].name,
+            data: res.data[i].chartData[j].data
+          })
+        }
+      }
       this.setState({
         showChart: true,
-        chartData: res.data[0].chartData
+        chartData: finalData
       });
     }
   }
