@@ -22,7 +22,6 @@ class HomePage extends Component {
 	}
 
 	handleUploadCSV = (e) => {
-		console.log("in")
 		var file = e.target.files[0];
 		var self = this;
 		Papa.parse(file, {
