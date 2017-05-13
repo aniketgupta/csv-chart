@@ -8,13 +8,13 @@ const initialState = {
 const ChartReducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case GET_CHART_DATA : 
-     return Object.assign({}, state, { 
-      data : action.data
-    });
+	  case GET_CHART_DATA : 
+	  	return Object.assign({}, state, { 
+	    	data : action.data
+	  	});
 
-    default:
-      return state;
+	  default:
+	    return state;
   }
 };
 
