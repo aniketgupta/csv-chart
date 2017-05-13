@@ -21,7 +21,7 @@ export function saveChartData (req, res) {
       if (saved) {
         res.json({
           status: true,
-          message: 'Data saved successfully'
+          message: 'Data saved successfully. Click on View Chart'
         });
       } else {
         console.log(err)
